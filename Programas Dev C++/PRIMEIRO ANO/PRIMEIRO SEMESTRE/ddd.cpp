@@ -5,6 +5,8 @@ main() {
 	
 	int a;
 	
+	//Adicionando essa linha;
+	
 	printf("Insira o DDD: \n" ,a);
 	scanf("%d" ,&a);
 	
