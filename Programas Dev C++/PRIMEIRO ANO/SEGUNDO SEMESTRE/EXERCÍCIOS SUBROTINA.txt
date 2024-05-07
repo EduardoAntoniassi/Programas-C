@@ -1,0 +1,213 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EXERCÍCIO 1:
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#include <ctype.h>
+
+void maior(int a, int b) {
+   
+	
+   if (a > b) {
+   	 printf("%d eh o maior\n" ,a);
+   	 
+   } else {
+   	 printf("%d eh o maior\n" ,b);
+   }
+   
+}
+
+int main() {
+	
+	int a, b;
+	
+	printf("Insira o primerio numero: \n");
+	scanf("%d" ,& a);
+	
+	printf("Insira o segundo numero: \n");
+	scanf("%d" ,& b);
+	
+	maior(a, b);
+	
+	return 0;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EXERCÍCIO 2:
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#include <ctype.h>
+
+void quad(int a, float raiz) {
+   
+	raiz = sqrt(a);
+	printf("A raiz quadrada do numero eh %.1f\n" ,raiz);
+	
+}
+  
+int main() {
+	
+	int a;
+	float raiz;
+	
+	printf("Insira o numero: \n");
+	scanf("%d" ,&a);
+	
+	quad(a, raiz);
+	
+	return 0;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EXERCÍCIO 3:
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#include <ctype.h>
+
+	void fator(int num) {
+		
+		int i;
+		for(i = 1; num > 1; num = num - 1){
+			i =  i * num;
+		}
+		
+		printf("O fatorial desse numero e: %d ", i);
+	}
+	int main() {
+	
+		int num;
+		
+		printf("Digite o numero que sera fatorado: \n");
+		scanf("%d", &num);
+		
+		fator(num);
+		return 0;
+	
+	}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#include <ctype.h>
+
+double media (double n1, double n2, double n3, char letra, double *mediareal) {
+	
+	if (letra == 'A'){
+		
+		*mediareal = (n1 + n2 + n3)/3;
+		
+		return *mediareal; 
+		
+		} else if (letra == 'P'){
+		 
+		 *mediareal = ((n1 * 5) + (n2 * 3) + (n3 * 2)) / 10;
+			
+		 return *mediareal;
+		 	
+		}
+}
+
+int main () {
+	
+	char letra;
+	double n1, n2, n3;
+	double mediareal;
+	
+	printf("Digite a nota 1: \n");
+	scanf("%lf" ,&n1);
+	
+	
+	printf("Digite a nota 2: \n");
+	scanf("%lf" ,&n2);
+	
+	
+	printf("Digite a nota 3: \n");
+	scanf("%lf" ,&n3);
+	
+	fflush(stdin);
+	
+	printf("Digite o tipo de media que deseja: \n");
+	printf("A - Media Aritmetica\n");
+	printf("P - Media Ponderada\n");
+	scanf("%c" ,&letra);
+	
+	mediareal = media(n1, n2, n3, letra, &mediareal);
+	printf("A media eh: %.2lf\n" ,mediareal);
+	
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#include <ctype.h>
+
+int soma_div(int n1, int *soma = 0){
+	
+	for(int i = 1; i <= n1; i++){
+		
+		if(n1 % i == 0){
+			
+			*soma = i + *soma;
+			
+		}
+	}
+	return *soma;
+}
+
+int main(){
+	
+	int n1;
+	int soma = 0;
+	
+	printf("Insira o nimero desejado:\n");
+	scanf("%d" ,&n1);
+	
+	printf("A soma dos divisores eh: %d\n" ,soma_div(n1, &soma));
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#include <ctype.h>
+
+double acrescimo(double valorant, double valorat, double *porcent){
+	
+	double x;
+	x = (100 * valorat) / valorant;
+	
+	*porcent = x - 100;
+	return *porcent;
+}
+
+int main(){
+	double valorant, valorat, porcent;
+	
+	printf("Insira o valor anterior:\n");
+	scanf("%lf" ,&valorant);
+	
+	printf("Insira o valor atual:\n");
+	scanf("%lf" ,&valorat);
+	
+	printf("O percentual de acrescimo eh de: %.2lf\n" ,acrescimo(valorant, valorat, &porcent));
+	
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

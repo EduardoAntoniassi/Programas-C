@@ -1,0 +1,298 @@
+Exercícios Classroom
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIO NÚMERO 1
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+main() {
+	
+	float nota1, nota2, nota3, media, peso1, peso2, peso3;
+	
+	printf("Insira a primeira nota: \n" ,nota1);
+	scanf("%f" ,&nota1);
+
+        printf("Insira o peso da primeira nota: \n" ,peso1);
+        scanf("%f" ,&peso1);
+	
+	printf("Insira a segunda nota: \n" ,nota2);
+	scanf("%f" ,&nota2);
+ 
+        printf("Insira o peso da segunda nota: \n" ,peso2);
+        scanf("%f" ,&peso2);
+	
+	printf("Insira a terceira nota: \n" ,nota3);
+	scanf("%f" ,&nota3);
+
+        printf("Insira o peso da terceira nota: \n" ,peso3);
+        scanf("%f" ,&peso3);
+	
+           media = ((nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3)) / 6 ;
+           
+    printf("A media das notas eh: %.1f" ,media);
+    
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIO NÚMERO 2
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+main() {
+	
+	float sal, neosal;
+	
+	printf("Insira seu salario atual \n" ,sal);
+	scanf("%f" ,&sal);
+	
+		neosal = sal + (sal * 0.15);
+		printf("Novo salario = %.2f$\n" ,neosal);
+		printf("Reajuste de 15 por cento");
+	
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIO NÚMERO 3
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+main() {
+	
+	float raio, area;
+	
+	printf("Insira o raio: \n" ,raio);
+	scanf("%f" ,&raio);
+	
+		area = 3.14 * pow(raio, 2);
+		
+	printf("A area do circulo eh: %.2f\n" ,area);
+	
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIO NÚMERO 4
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+main() {
+	
+	float rackg, gatos, racgram, total, rackg3;
+	
+	printf("Insira a quantidade de racao comprada em Kg: \n" ,rackg);
+	scanf("%f" ,&rackg);
+	
+	printf("Insira a quantidade de racao entregue para os gatos por dia, em gramas: \n" ,gatos);
+	scanf("%f" ,&gatos);
+	
+        racgram = rackg * 1000;
+	gatos = gatos * 3;
+	total = racgram - gatos;
+	rackg3 = total / 1000;
+	
+	printf("A quantidade de racao em 3 dias sera de: %.2f\n" ,rackg3);
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIO NÚMERO 5
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+
+main() {
+	
+	float cache, ingresso, total;
+
+    printf("Insira o valor do cache: \n" ,cache);
+	scanf("%f" ,&cache);
+	
+	printf("Insira o valor do ingresso: \n" ,ingresso);
+	scanf("%f" ,&ingresso);
+	
+	total = cache / ingresso;
+	
+	printf("O numero de ingressos vendidos para cobrir o cache eh: %.2f\n" ,total);
+	
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIO NÚMERO 6
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+main() {
+	
+	int num;
+	
+	printf("Insira o numero: \n" ,num);
+	scanf("%d" ,&num);
+	
+	   if (num % 2 == 0) {
+	   	printf("O numero eh par");
+	   	
+	   } else  {
+	   	printf("O numero eh impar");
+	   }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIO NÚMERO 7
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+main() {
+	
+	float nota1, nota2, nota3, media, exame;
+	
+    printf("Insira as notas: \n");
+    scanf("%f %f %f" ,&nota1 ,&nota2 ,&nota3);
+    
+    media = (nota1 + nota2 + nota3) / 3;
+    
+    if (media < 3.0) {
+    	printf("Reprovado!");
+    	
+	} else if (media >= 3.0 && media < 7) {
+		printf("Exame\n");
+		exame = 7.0 - media;
+		printf("Nota necessaria para o exame: %.1f\n" ,exame);
+		
+	} else if (media >= 7.0) {
+		printf("Aprovado!\n");
+	
+	}
+    
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIO NÚMERO 8 
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+main() {
+	
+	int num, num2;
+	
+	printf("Insira dois numeros: \n");
+	scanf("%d %d" ,&num ,&num2);
+	
+	   if (num2 > num) {
+	   	printf("O maior eh: %d\n" ,num2);
+	   	
+	   } else {
+	   	printf("O maior eh: %d\n" ,num);
+	   }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIO NÚMERO 9
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+main() {
+	
+	int a, preco;
+	
+	printf("Insira o preco: \n");
+	scanf("%f" ,&preco);
+	printf("Insira o codigo: \n" ,a);
+	scanf("%d" ,&a);
+	
+	if (a == 1) {
+		printf("O codigo se refere ao Norte");
+	
+	} else if (a == 2) {
+		printf("O codigo se refere ao Nordeste");
+
+	} else if (a == 3) {
+		printf("O codigo se refere ao Sudeste");
+		
+	} else if (a == 4) {
+		printf("O codigo se refere ao Sul");
+		
+	} else if (a == 5) {
+		printf("O codigo se refere ao Centro-Oeste");
+	} 
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIO NÚMERO 11 (10 ANULADO) 
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+main() {
+	
+	int i;
+	
+	   for (i = 1000; i <= 2000; i++) {
+	   	
+	   	 if (i % 7 == 0) {
+	   	 	 printf("%d\n" ,i);
+			}
+	   }
+	
+	
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIO NÚMERO 13 (12 NÃO CONSEGUI)
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+
+main() {
+	
+	float price, par12, pri12, par24, pri24, par48, pri48, par60, pri60, avist, privist;
+	
+	printf("Insira o valor do carro: \n");
+	scanf("%f" ,&price);
+	
+	par12 = price * 0.06;
+	pri12 = price + par12;
+	
+	par24 = price * 0.12;
+	pri24 = price + par24;
+	
+	par48 = price * 0.24;
+	pri48 = price + par48;
+	
+	par60 = price * 0.30;
+	pri60 = price + par60;
+	
+	avist = price * 0.05;
+	privist = price - avist;
+	
+	printf("********************* TABELA DE PARCELAS EM MESES *********************\n");
+	printf("-----------------------------------------------------------------------\n");
+	printf("| A vista |    Preco final: %.2f    |   Desconto: %.2f   \n" ,privist ,avist);
+	printf("|   12    |    Preco final: %.2f    |   Valor da parcela: %.2f   \n" ,pri12 ,par12);
+	printf("|   24    |    Preco final: %.2f    |   Valor da parcela: %.2f   \n" ,pri24 ,par24);
+	printf("|   48    |    Preco final: %.2f    |   Valor da parcela: %.2f   \n" ,pri48 ,par48);
+	printf("|   60    |    Preco final: %.2f    |   Valor da parcela: %.2f   \n" ,pri60 ,par60);
+	printf("-----------------------------------------------------------------------\n");
+	printf("***********************************************************************\n");
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
