@@ -116,6 +116,7 @@ void benchmark() {
 int main() {
 	
     benchmark();
+    system("pause");
     return 0;
     
     //Finalização da função principal
