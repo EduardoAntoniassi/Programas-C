@@ -8,7 +8,7 @@
 //Inclusão da biblioteca locale.h para deixar o código e medições no padrão da língua portugues
 #include <locale.h>
 
-//Definindo o número das interações e o tamanho do arquivo em bytes
+//Definindo o número das iterações e o tamanho do arquivo em bytes
 #define NUM_ITERACOES 10000
 #define TAMANHO_ARQUIVO 1000
 
@@ -42,7 +42,7 @@ void benchmark() {
     // Medir o tempo de execução da tarefa
     inicio = clock();
 
-	//Inicia a execução do teste de Benchmark, de acordo com o número de interações definidas previamente
+	//Inicia a execução do teste de Benchmark, de acordo com o número de iterações definidas previamente
     for (int i = 0; i < NUM_ITERACOES; i++) {
     	
         // Cria o arquivo
