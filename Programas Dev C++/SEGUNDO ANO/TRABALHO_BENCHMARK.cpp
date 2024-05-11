@@ -10,7 +10,7 @@
 
 //Definindo o número das iterações e o tamanho do arquivo em bytes
 #define NUM_ITERACOES 10000
-#define TAMANHO_ARQUIVO 1000
+#define TAMANHO_ARQUIVO 10000
 
 // Função para realizar a tarefa de benchmark
 void benchmark() {
@@ -94,8 +94,8 @@ void benchmark() {
     //Inserção da váriavel que calcula a média de tempo para avaliar em nota
     double tempo_medio = tempo_total / NUM_ITERACOES;
     
-    //Classifica a nota de acordo com o tempo médio em uma escala de 100.0 para ser avaliada de 0 - 10
-    int nota = (int)(10.0 - (tempo_medio * 100.0));
+    //Classifica a nota de acordo com o tempo médio em uma escala de 100.0 para ser avaliada de 0 - 100
+    int nota = (int)(10.0 / (tempo_medio * 100.0));
     
     //If para deixar o valor da nota como 0, já que o número mínimo de nota é 0
     if (nota < 0) {
@@ -110,6 +110,7 @@ void benchmark() {
     printf("-----------------------------------------------------------------------------\n");
     
     //Finalização da Função de Teste do Benchmark
+    
 }
 
 //Função principal de execução, feita para puxar a função que executa o Benchmark
